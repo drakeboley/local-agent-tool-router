@@ -1,0 +1,36 @@
+{
+  "name": "localtool-bridge",
+  "version": "1.0.0",
+  "description": "Redundant MCP & WebSocket bridge for local tool execution and LM Studio agent delegation",
+  "main": "dist/index.js",
+  "bin": {
+    "localtool": "./dist/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test tests/**/*.test.ts"
+  },
+  "keywords": [
+    "mcp",
+    "websocket",
+    "lm-studio",
+    "agent",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
